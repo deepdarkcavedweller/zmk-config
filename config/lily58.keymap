@@ -76,13 +76,13 @@
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  HOME |                     |  HOME |  INS  | BRI_UP|BRI_DN |       |        |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  HOME |                     |  HOME |  INS  | BRI_UP|BRI_DN |       |        |
 // |  "`"  |  "="  | ALT L |  UP   | ALT R |  PgUp |                     |  PGUP | ALT L |  UP   | ALT R |       |  "="   |
 // |       |       | LEFT  | DOWN  | RIGHT |  PgDw |                     |  PGDN | LEFT  | DOWN  | RIGHT |       |  ENTER |
 // | SHIFT |  "["  |  "]"  |  "{"  |  "}"  |  End  | SCREEN |   | SCREEN |  END  |  "|"  |   ;   |   :   |  "\"  |  SHIFT |
 //                         |  ESC  |  TAB  |  DEL  |        |   |        |  DEL  |  TAB  |  Esc  |
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp HOME                                    &kp HOME         &kp INS    &kp C_BRI_UP   &kp C_BRI_DN    &none        &trans
+&trans          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp HOME                                    &kp HOME         &kp INS    &kp C_BRI_UP   &kp C_BRI_DN    &none        &trans
 &kp GRAVE       &kp EQUAL      &ALT_L         &kp UP          &ALT_R         &kp PG_UP                                   &kp PG_UP        &ALT_L     &kp UP         &ALT_R   	    &none        &kp EQUAL
 &none           &nine          &kp LEFT       &kp DOWN        &kp RIGHT      &kp PG_DN                                   &kp PG_DN        &kp LEFT   &kp DOWN       &kp RIGHT       &none        &trans
 &trans          &kp LBKT       &kp RBKT       &kp LBRC        &kp RBRC       &kp END         &SCREEN       &SCREEN       &kp END          &kp PIPE   &kp SEMI  	    &kp APOS        &kp BSLH     &trans
@@ -97,13 +97,13 @@
 // |       |  F1   |  F2   |  F3   |  F4   |  F5   |                   |      |   7   |   8   |   9   |   +   |  DEL  |
 // |       |  F6   |  F7   |  F8   |  F9   |  F10  |                   |      |   4   |   5   |   6   |   -   |       | 
 // |       |  F11  |  F12  |  F13  |  F14  |  F15  |                   |      |   1   |   2   |   3   |   *   | ENTER |
-// | SHIFT |       |       |       |       |       |       |   |       |      |   =   |   0   |   .   |   /   | SHIFT |
+// | SHIFT | BTCLR |       |       |       |       |       |   |       |      |   =   |   0   |   .   |   /   | SHIFT |
 //                         |  CTRL |  ALT  |  META |       |   |       | META |  ALT  |  CTRL |
             bindings = <
-&trans      &kp F1    &kp F2    &kp F3          &kp F4     &kp F5                                      &trans           &kp KP_N7   &kp KP_N8     &kp KP_N9    &kp KP_PLUS       &kp DEL
-&trans      &kp F6    &kp F7    &kp F8          &kp F9     &kp F10                                     &trans           &kp KP_N4   &kp KP_N5     &kp KP_N6    &kp KP_MINUS      &trans
-&trans      &kp F11   &kp F12   &kp F13         &kp F14    &kp F15                                     &trans           &kp KP_N1   &kp KP_N2     &kp KP_N3    &kp KP_MULTIPLY   &trans
-&trans      &trans    &trans    &trans          &trans     &trans          &trans        &trans        &trans           &kp EQUAL   &kp KP_N0     &kp KP_DOT   &kp KP_DIVIDE     &trans
+&trans      &kp F1      &kp F2    &kp F3          &kp F4     &kp F5                                      &trans           &kp KP_N7   &kp KP_N8     &kp KP_N9    &kp KP_PLUS       &kp DEL
+&trans      &kp F6      &kp F7    &kp F8          &kp F9     &kp F10                                     &trans           &kp KP_N4   &kp KP_N5     &kp KP_N6    &kp KP_MINUS      &trans
+&trans      &kp F11     &kp F12   &kp F13         &kp F14    &kp F15                                     &trans           &kp KP_N1   &kp KP_N2     &kp KP_N3    &kp KP_MULTIPLY   &trans
+&trans      &bt BT_CLR  &trans    &trans          &trans     &trans          &trans        &trans        &trans           &kp EQUAL   &kp KP_N0     &kp KP_DOT   &kp KP_DIVIDE     &trans
                                 &mt LCTRL DEL   &kp LALT   &kp LEFT_META   &lt 1 SPACE   &lt 1 SPACE   &kp RIGHT_META   &kp RALT    &mt RCTRL DEL
             >;
 
