@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-    macros {
+   macros {
         ALT_R: ALT_R {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -41,6 +41,24 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+        caps_macro: caps_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <100>;    // Add delay for MacOS Caps Lock recognition
+            wait-ms = <100>;   // Additional wait to ensure recognition
+            bindings = <&kp CAPS>;
+        };
+    };
+
+    behaviors {
+        lt_caps: layer_tap_caps {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&caps_macro>;  // Use the macro instead of direct kp
+        };
     };
 };
 
@@ -58,7 +76,7 @@
             bindings = <
 &kp ESC		    &kp N1   &kp N2   &kp N3          &kp N4     &kp N5                                      &kp N6           &kp N7     &kp N8      &kp N9    &kp N0     &kp BSPC
 &lt 2 TAB	    &kp Q    &kp W    &kp E           &kp R      &kp T                                       &kp Y            &kp U      &kp I       &kp O     &kp P      &lt 2 MINUS
-&lt 1 CAPSLOCK  &kp A    &kp S    &kp D           &kp F      &kp G                                       &kp H            &kp J      &kp K       &kp L     &kp SQT    &lt 1 ENTER
+&lt_caps 1 0    &kp A    &kp S    &kp D           &kp F      &kp G                                       &kp H            &kp J      &kp K       &kp L     &kp SQT    &lt 1 ENTER
 &kp LSHFT	    &kp Z    &kp X    &kp C           &kp V      &kp B           &kp LBKT      &kp RBKT      &kp N            &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
                                   &mt LCTRL DEL   &kp LALT   &kp LEFT_META   &lt 1 SPACE   &lt 1 SPACE   &kp RIGHT_META   &kp RALT   &mt RCTRL DEL
             >;
