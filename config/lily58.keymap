@@ -86,16 +86,16 @@
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  HOME |                     |  HOME |  INS  | BRI_UP|BRI_DN |       |        |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  HOME |                     |  HOME |  INS  | BRI_UP|BRI_DN |       |  DEL   |
 // |  "`"  |  "="  | ALT L |  UP   | ALT R |  PgUp |                     |  PGUP | ALT L |  UP   | ALT R |       |  "="   |
 // |       |  CAPS | LEFT  | DOWN  | RIGHT |  PgDw |                     |  PGDN | LEFT  | DOWN  | RIGHT |       |  ENTER |
 // | SHIFT |  "["  |  "]"  |  "{"  |  "}"  |  End  | SCREEN |   | SCREEN |  END  |  "|"  |   ;   |   :   |  "\"  |  SHIFT |
 //                         |  ESC  |  TAB  |  DEL  |        |   |        |  DEL  |  TAB  |  Esc  |
             bindings = <
-&trans          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp HOME                                    &kp HOME         &kp INS    &kp C_BRI_UP   &kp C_BRI_DN    &none        &trans
-&kp GRAVE       &kp EQUAL      &ALT_L         &kp UP          &ALT_R         &kp PG_UP                                   &kp PG_UP        &ALT_L     &kp UP         &ALT_R   	    &none        &kp EQUAL
+&trans          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &kp HOME                                    &kp HOME         &kp INS    &kp C_BRI_UP   &kp C_BRI_DN    &none        &kp DEL
+&kp GRAVE       &kp EQUAL      &ALT_L         &kp UP          &ALT_R         &kp PG_UP                                   &kp PG_UP        &ALT_L     &kp UP         &ALT_R          &none        &kp EQUAL
 &none           &kp CAPS       &kp LEFT       &kp DOWN        &kp RIGHT      &kp PG_DN                                   &kp PG_DN        &kp LEFT   &kp DOWN       &kp RIGHT       &none        &trans
-&trans          &kp LBKT       &kp RBKT       &kp LBRC        &kp RBRC       &kp END         &SCREEN       &SCREEN       &kp END          &kp PIPE   &kp SEMI  	    &kp APOS        &kp BSLH     &trans
+&trans          &kp LBKT       &kp RBKT       &kp LBRC        &kp RBRC       &kp END         &SCREEN       &SCREEN       &kp END          &kp PIPE   &kp SEMI  	  &kp APOS        &kp BSLH     &trans
                                               &mt LCTRL DEL   &kp LALT       &kp LEFT_META   &lt 1 SPACE   &lt 1 SPACE   &kp RIGHT_META   &kp RALT   &mt RCTRL DEL
             >;
 
