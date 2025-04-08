@@ -94,8 +94,8 @@
             bindings = <
 &trans          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4                                &kp HOME         &kp INS    &kp C_BRI_DN   &kp C_BRI_UP    &none        &kp DEL
 &kp GRAVE       &kp EQUAL      &ALT_L         &kp UP          &ALT_R         &kp PG_UP                                   &kp PG_UP        &ALT_L     &kp UP         &ALT_R          &none        &kp EQUAL
-&none           &kp CAPS       &kp LEFT       &kp DOWN        &kp RIGHT      &kp PG_DN                                   &kp PG_DN        &kp LEFT   &kp DOWN       &kp RIGHT       &none        &trans
-&trans          &kp LBKT       &kp RBKT       &kp LBRC        &kp RBRC       &kp END         &SCREEN       &SCREEN       &kp END          &kp PIPE   &kp SEMI  	  &kp APOS        &kp BSLH     &trans
+&none           &kp CAPS       &kp LEFT       &kp DOWN        &kp RIGHT      &kp PG_DN                                   &kp PG_DN        &kp LEFT   &kp DOWN       &kp RIGHT       &none        &kp ENTER
+&trans          &kp LBKT       &kp RBKT       &kp LBRC        &kp RBRC       &kp END         &SCREEN       &SCREEN       &kp END          &kp PIPE   &kp SEMI  	  &kp APOS        &kp BSLH     &kp RSHIFT
                                               &mt LCTRL DEL   &kp LALT       &kp LEFT_META   &lt 1 SPACE   &lt 1 SPACE   &kp RIGHT_META   &kp RALT   &mt RCTRL DEL
             >;
 
@@ -112,8 +112,8 @@
             bindings = <
 &trans      &kp F1      &kp F2    &kp F3          &kp F4     &kp F5                                      &trans           &kp KP_N7   &kp KP_N8     &kp KP_N9    &kp KP_PLUS       &kp DEL
 &trans      &kp F6      &kp F7    &kp F8          &kp F9     &kp F10                                     &trans           &kp KP_N4   &kp KP_N5     &kp KP_N6    &kp KP_MINUS      &trans
-&trans      &kp F11     &kp F12   &kp F13         &kp F14    &kp F15                                     &trans           &kp KP_N1   &kp KP_N2     &kp KP_N3    &kp KP_MULTIPLY   &trans
-&trans      &bt BT_CLR  &trans    &trans          &trans     &trans          &trans        &trans        &trans           &kp EQUAL   &kp KP_N0     &kp KP_DOT   &kp KP_DIVIDE     &trans
+&trans      &kp F11     &kp F12   &kp F13         &kp F14    &kp F15                                     &trans           &kp KP_N1   &kp KP_N2     &kp KP_N3    &kp KP_MULTIPLY   &kp ENTER
+&trans      &bt BT_CLR  &trans    &trans          &trans     &trans          &trans        &trans        &trans           &kp EQUAL   &kp KP_N0     &kp KP_DOT   &kp KP_DIVIDE     &kp RSHIFT
                                 &mt LCTRL DEL   &kp LALT   &kp LEFT_META   &lt 1 SPACE   &lt 1 SPACE   &kp RIGHT_META   &kp RALT    &mt RCTRL DEL
             >;
 
